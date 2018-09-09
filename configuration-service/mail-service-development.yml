@@ -1,7 +1,7 @@
 application:
     name: mail-service-app
 server:
-    port: "8083"
+    port: "0"
 spring:
     mail:
         host: smtp.gmail.com

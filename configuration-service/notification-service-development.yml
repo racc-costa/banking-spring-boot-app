@@ -1,7 +1,7 @@
 application:
     name: notification-service-app
 server:
-    port: "8082"
+    port: "0"
 spring:
     rabbitmq:
         host: localhost
