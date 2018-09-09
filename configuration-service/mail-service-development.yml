@@ -1,0 +1,31 @@
+application:
+    name: mail-service-app
+server:
+    port: "8083"
+spring:
+    mail:
+        host: smtp.gmail.com
+        port: "587"
+        username: <user@domain.com>
+        password: <password>
+        properties:
+            mail:
+                smtp:
+                    auth: "true"
+                    starttls:
+                        enable: "true"
+        transport:
+            protocol: smtp
+        debug: "true"
+    rabbitmq:
+        host: localhost
+        port: "5672"
+        username: notification
+        password: notification
+queue:
+    client:
+        name: queue_client_notification
+    account:
+        name: queue_account_notification
+    onmessage:
+        method: onMessage
