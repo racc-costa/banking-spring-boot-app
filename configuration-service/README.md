@@ -9,7 +9,7 @@
 - Package Name: br.com.racc.banking.configuration
 - Packaging: Jar
 - Java Version: 8
-- Dependencies: DevTools, Lombok, Config Server, Actuator
+- Dependencies: DevTools, Lombok, Config Server, Eureka Discovery, Actuator
 
 
 ## Local git repo for configuration persistence
