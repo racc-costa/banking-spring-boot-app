@@ -1,7 +1,7 @@
 # Project configuration
 
 - Gradle Project
-- Srping Boot: 2.0.4
+- Spring Boot: 2.0.4
 - Group: br.com.racc.banking
 - Artifact: mail-service
 - Name: mail-service-app
@@ -9,7 +9,7 @@
 - Package Name: br.com.racc.banking.mail
 - Packaging: Jar 
 - Java Version: 8
-- Dependencies: DevTools, Lombok, Web, RabbitMQ, Mail, Config Client, Actuator
+- Dependencies: DevTools, Lombok, Web, RabbitMQ, Mail, Config Client, Eureka Discovery, Actuator
 
 
 ## RabbitMQ Docker container for queue
@@ -22,4 +22,5 @@
 ## Dependency
 
 - configuration-service
+- discovery-service
 - notification-service

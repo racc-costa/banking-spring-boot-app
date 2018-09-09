@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface NotificationClient {
 
 	@RequestMapping(value = "/accounts", method = RequestMethod.POST)
-	void notifyNewClient(@RequestBody ClientDTO client);
+	void notifyClientAboutNewAccount(@RequestBody ClientDTO client);
 
 }

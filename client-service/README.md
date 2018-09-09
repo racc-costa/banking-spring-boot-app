@@ -1,7 +1,7 @@
 # Project configuration
 
 - Gradle Project
-- Srping Boot: 2.0.4
+- Spring Boot: 2.0.4
 - Group: br.com.racc.banking
 - Artifact: client-service
 - Name: client-service-app
@@ -9,7 +9,7 @@
 - Package Name: br.com.racc.banking.client
 - Packaging: Jar 
 - Java Version: 8
-- Dependencies: DevTools, Lombok, Web, JPA, PostgreSQL, Config Client, Actuator
+- Dependencies: DevTools, Lombok, Web, JPA, PostgreSQL, Config Client, Eureka Discovery, Feign, Actuator
 - Path: http://localhost:8081/clients
 
 
@@ -20,7 +20,9 @@
 	
 ## Dependency
 
-- configuration-service	
+- configuration-service
+- discovery-service
+- notification-service
 	
 
 ## References

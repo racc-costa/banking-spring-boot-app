@@ -26,7 +26,13 @@
     $ git add -A .
     $ git commit -m "Add properties"
 
-# References
+
+## Dependency
+
+- discovery-service
+
+
+## References
 
 - Spring Cloud Config: https://cloud.spring.io/spring-cloud-config/
 - Centralized Configuration: https://spring.io/guides/gs/centralized-configuration/

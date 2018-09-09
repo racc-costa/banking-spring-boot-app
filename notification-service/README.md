@@ -1,7 +1,7 @@
 # Project configuration
 
 - Gradle Project
-- Srping Boot: 2.0.4
+- Spring Boot: 2.0.4
 - Group: br.com.racc.banking
 - Artifact: notification-service
 - Name: notification-service-app
@@ -9,7 +9,7 @@
 - Package Name: br.com.racc.banking.notification
 - Packaging: Jar 
 - Java Version: 8
-- Dependencies: DevTools, Lombok, Web, RabbitMQ, Config Client, Actuator
+- Dependencies: DevTools, Lombok, Web, RabbitMQ, Config Client, Eureka Discovery, Actuator
 - Path: http://localhost:8082/notifications
 
 
@@ -23,6 +23,7 @@
 ## Dependency
 
 - configuration-service
+- discovery-service
 	
 	
 ## References

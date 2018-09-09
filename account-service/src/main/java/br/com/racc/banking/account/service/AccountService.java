@@ -31,7 +31,7 @@ public class AccountService {
 		accountRepository.save(account);
 
 		ClientDTO clientDTO = clientClient.getClientById(clientID);
-		notificationClient.notifyNewClient(clientDTO);
+		notificationClient.notifyClientAboutNewAccount(clientDTO);
 
 		return account;
 	}

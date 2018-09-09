@@ -4,16 +4,16 @@ server:
     port: "8082"
 spring:
     rabbitmq:
-    host: localhost
-    port: "5672"
-    username: notification
-    password: notification
+        host: localhost
+        port: "5672"
+        username: notification
+        password: notification
 queue:
     client:
-    name: queue_client_notification
+        name: queue_client_notification
     account:
-    name: queue_account_notification
+        name: queue_account_notification
 exchange:
     notification:
-    name: exchange_notification
+        name: exchange_notification
     

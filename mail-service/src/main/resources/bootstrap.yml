@@ -1,0 +1,8 @@
+spring:
+    application:
+        name: "mail-service"
+    profiles:
+        active: "development"
+    cloud:
+        config:
+            uri: "http://localhost:8888"

@@ -2,7 +2,6 @@ package br.com.racc.banking.client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.MessageSource;
@@ -13,7 +12,6 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 @SpringBootApplication
 @EnableJpaAuditing
 @EnableEurekaClient
-@EnableDiscoveryClient
 @EnableFeignClients
 public class ClientServiceApplication {
 
