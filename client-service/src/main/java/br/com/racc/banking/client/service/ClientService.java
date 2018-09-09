@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import br.com.racc.banking.client.domain.Client;
 import br.com.racc.banking.client.exception.ClientAlreadyExistException;
 import br.com.racc.banking.client.exception.ClientNotFoundException;
+import br.com.racc.banking.client.integration.ClientDTO;
+import br.com.racc.banking.client.integration.NotificationClient;
 import br.com.racc.banking.client.repository.ClientRepository;
 
 @Service
@@ -16,15 +18,21 @@ public class ClientService {
 	private static final Logger logger = LoggerFactory.getLogger(ClientService.class);
 
 	@Autowired
-	ClientRepository clientRepository;
+	private ClientRepository clientRepository;
+
+	@Autowired
+	private NotificationClient notificationClient;
 
 	public Client add(final Client client) {
 		if (this.clientRepository.existsBySin(client.getSin())) {
 			throw new ClientAlreadyExistException(client.getSin());
 		}
 
+		Client newClient = this.clientRepository.save(client);
+		notificationClient.notifyNewClient(new ClientDTO(newClient.getId(), newClient.getEmail()));
+
 		logger.debug("Adding a new client.");
-		return this.clientRepository.save(client);
+		return newClient;
 	}
 
 	public Client get(final Long id) {
