@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '2.0.4.RELEASE'
+		springBootVersion = '2.1.1.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -21,12 +21,11 @@ sourceCompatibility = 1.8
 
 repositories {
 	mavenCentral()
+	maven { url "https://repo.spring.io/milestone" }
 }
 
 
-ext {
-	springCloudVersion = 'Finchley.SR1'
-}
+ext['springCloudVersion'] = 'Greenwich.RC2'
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-actuator')

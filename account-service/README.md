@@ -1,7 +1,7 @@
 # Project configuration
 
 - Gradle Project
-- Spring Boot: 2.0.4
+- Spring Boot: 2.1.1.RELEASE
 - Group: br.com.racc.banking
 - Artifact: account-service
 - Name: account-service-app

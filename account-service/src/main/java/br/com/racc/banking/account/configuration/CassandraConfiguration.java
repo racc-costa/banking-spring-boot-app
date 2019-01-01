@@ -21,7 +21,8 @@ public class CassandraConfiguration extends AbstractCassandraConfiguration {
 	@Override
 	protected List<String> getStartupScripts() {
 
-		String scriptCreateKeySpace = "CREATE KEYSPACE IF NOT EXISTS " + getKeyspaceName() + " WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };";
+		String scriptCreateKeySpace = "CREATE KEYSPACE IF NOT EXISTS " + getKeyspaceName()
+				+ " WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };";
 		String scriptUseKeySpace = "USE " + getKeyspaceName();
 		String scriptCreateAccountTable = "CREATE TABLE IF NOT EXISTS account (id UUID PRIMARY KEY, number bigint, clientID bigint, creationDate date, balance decimal, blockedBalance decimal);";
 		String scriptCreateAccountNumberIndex = "CREATE INDEX IF NOT EXISTS accountNumberIndex ON account (number);";
@@ -30,5 +31,10 @@ public class CassandraConfiguration extends AbstractCassandraConfiguration {
 
 		return Arrays.asList(scriptCreateKeySpace, scriptUseKeySpace, scriptCreateAccountTable,
 				scriptCreateAccountNumberIndex, scriptCreateAccountClientIdIndex, scriptCreateSequenceTable);
+	}
+
+	@Override
+	protected boolean getMetricsEnabled() {
+		return false;
 	}
 }
