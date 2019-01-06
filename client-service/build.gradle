@@ -34,6 +34,8 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
 	compile('org.springframework.cloud:spring-cloud-starter-openfeign')
+	compile('org.springframework.cloud:spring-cloud-starter-sleuth')
+	compile('org.springframework.cloud:spring-cloud-starter-zipkin')
 	runtime('org.springframework.boot:spring-boot-devtools')
 	runtime('org.postgresql:postgresql')
 	compileOnly('org.projectlombok:lombok')
